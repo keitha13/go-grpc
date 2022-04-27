@@ -73,6 +73,9 @@ clean_blog: ## Clean generated files for blog
 
 rebuild: clean all ## Rebuild the whole project
 
+serve: ##build a server
+	./bin/greet/server
+
 about: ## Display info related to the build
 	@echo "OS: ${OS}"
 	@echo "Shell: ${SHELL} ${SHELL_VERSION}"
