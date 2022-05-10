@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+package calculator;
+
+import "primes.proto";
+import "avg.proto";
+
+option go_package = "go_grpc/calculator/proto";
+
+service CalculatorService{
+  rpc Primes (PrimeRequest) returns (stream PrimeResponse);
+  rpc Avg (stream AvgRequest) returns (AvgResponse);
+}

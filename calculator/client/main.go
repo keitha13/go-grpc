@@ -16,8 +16,8 @@ func main() {
 	}
 	defer conn.Close()
 
-	c := pb.NewPrimeServiceClient(conn)
+	c := pb.NewCalculatorServiceClient(conn)
 
 	//doGreet(c)
-	doPrime(c)
+	doPrimes(c)
 }
